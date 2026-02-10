@@ -154,7 +154,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SystemeReflexion.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\GAnimal.cpp" />
+    <ClCompile Include="src\GObject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\GAnimal.h" />
+    <ClInclude Include="src\GObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
