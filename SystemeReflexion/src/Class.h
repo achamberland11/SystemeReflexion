@@ -4,7 +4,8 @@
 class CClass
 {
 public:
-    CClass(const std::string& name, const CClass* parent): Name(name), Parent(parent) {}
+    std::string Name;
+    const CClass* Parent;
 
     const std::string& GetName() const { return Name; }
     const CClass* GetParent() const { return Parent; }
@@ -19,9 +20,4 @@ public:
         }
         return false;
     }
-
-private:
-    std::string Name;
-    const CClass* Parent;
-    
 };

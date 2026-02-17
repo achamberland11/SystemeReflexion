@@ -1,3 +1,6 @@
 ﻿#include "GPlayerState.h"
 
-CClass GPlayerState::_StaticClass("GPlayerState", nullptr);
+CClass GPlayerState::sClass = CClass {
+    "Animal",
+    nullptr
+};

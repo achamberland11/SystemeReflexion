@@ -1,3 +1,6 @@
 ﻿#include "GDog.h"
 
-CClass GDog::_StaticClass("GDog", GAnimal::StaticClass());
+CClass GDog::sClass = CClass {
+    "Dog",
+    &GAnimal::sClass
+};

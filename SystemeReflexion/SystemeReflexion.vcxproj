@@ -244,6 +244,7 @@
     <ClInclude Include="src\GDog.h" />
     <ClInclude Include="src\GObject.h" />
     <ClInclude Include="src\GPlayerState.h" />
+    <ClInclude Include="src\ObjectMacros.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

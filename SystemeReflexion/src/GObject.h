@@ -1,31 +1,16 @@
 ﻿#pragma once
 #include "Class.h"
-
-// Macro à placer dans chaque classe dérivée supportant la réflexion.
-// Elle déclare :
-//   - une instance statique CClass (_StaticClass)
-//   - une méthode statique StaticClass() pour y accéder
-//   - l'override de GetClass() qui retourne le CClass de l'instance
-#define GENERATE_REFLECTION()                                       \
-public:                                                             \
-    static const CClass* StaticClass() { return &_StaticClass; }    \
-    virtual const CClass* GetClass() const override { return &_StaticClass; } \
-private:                                                            \
-    static CClass _StaticClass;                                     \
-public:
-
-
+#include "ObjectMacros.h"
 
 class GObject
 {
 public:
-    virtual ~GObject() = default;
-
+    virtual ~GObject() {}
     virtual const CClass* GetClass() const = 0;
 
-    bool IsA(const CClass* InClass) const
+    bool IsA(const CClass& InClass) const
     {
-        return GetClass()->IsChildOf(InClass);
+        return GetClass()->IsChildOf(&InClass);
     }
 };
 

@@ -5,5 +5,4 @@ class GAnimal : public GObject
 {
 public:
     GENERATE_REFLECTION()
-    
 };
